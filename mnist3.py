@@ -59,6 +59,7 @@ def upload_file():
 
     return render_template("index.html",answer="")
 
-
+# 以下がmnist2から変更
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host ='0.0.0.0',port = port)
